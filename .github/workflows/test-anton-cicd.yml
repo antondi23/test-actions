@@ -74,7 +74,7 @@ jobs:
         
     steps:
     - name: Deploy to Prod1
-      run : echo ${{ Prod1.APPNAME }}
+      run : echo ${{ var.APPNAME }}
 
   cd_pipeline_prod2:
     runs-on: ubuntu-latest
@@ -82,7 +82,7 @@ jobs:
         
     steps:
     - name: Deploy to Prod2
-      run : echo ${{ Prod2.APPNAME }}
+      run : echo ${{ var.APPNAME }}
         
         
         
