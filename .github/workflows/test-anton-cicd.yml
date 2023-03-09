@@ -70,19 +70,21 @@ jobs:
         
   cd_pipeline_prod1:
     runs-on: ubuntu-latest
+    environment: Prod1
     needs: [ci_pipeline]
         
     steps:
     - name: Deploy to Prod1
-      run : echo "Deploying ${{ vars.Prod1.APPNAME }}"
+      run : echo "Deploying ${{ vars.APPNAME }}"
 
   cd_pipeline_prod2:
     runs-on: ubuntu-latest
+    environment: Prod2
     needs: [ci_pipeline]
         
     steps:
     - name: Deploy to Prod2
-      run : echo "Deploying ${{ vars.Prod2.APPNAME }}"
+      run : echo "Deploying ${{ vars.APPNAME }}"
         
         
         
